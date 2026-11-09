@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — ScanPro PDF</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --primary: #4f46e5;
+      --primary-soft: #eef2ff;
+      --emerald: #059669;
+      --emerald-soft: #ecfdf5;
+      --border: #e2e8f0;
+      --shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.12);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #090d1f;
+        --surface: #111736;
+        --surface-card: #161f42;
+        --text-main: #f8fafc;
+        --text-muted: #cbd5e1;
+        --primary: #818cf8;
+        --primary-soft: rgba(99, 102, 241, 0.16);
+        --emerald: #34d399;
+        --emerald-soft: rgba(16, 185, 129, 0.14);
+        --border: rgba(148, 163, 184, 0.2);
+        --shadow: 0 12px 32px -10px rgba(0, 0, 0, 0.45);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.68;
+      padding-bottom: 64px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0a0e27 0%, #1e1b4b 55%, #0f172a 100%);
+      color: #ffffff;
+      padding: 48px 20px 40px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .brand-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .brand-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .pdf-badge {
+      background: #ef4444;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 14px;
+      padding: 3px 9px;
+      border-radius: 7px;
+      letter-spacing: 0.6px;
+    }
+
+    .hero h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      max-width: 640px;
+      margin: 0 auto 18px;
+      font-size: 15px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #e2e8f0;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+
+    .pill.highlight {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: rgba(52, 211, 153, 0.4);
+      color: #6ee7b7;
+    }
+
+    .container {
+      max-width: 840px;
+      margin: -22px auto 0;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .guarantee-box {
+      background: var(--emerald-soft);
+      border: 1.5px solid var(--emerald);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+    }
+
+    .guarantee-box h2 {
+      color: var(--emerald);
+      font-size: 17px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .guarantee-box p {
+      color: var(--text-main);
+      font-size: 14.5px;
+    }
+
+    h2.section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 14.8px;
+      margin-bottom: 12px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+      color: var(--text-muted);
+      font-size: 14.5px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    li strong {
+      color: var(--text-main);
+    }
+
+    .perm-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .perm-table th,
+    .perm-table td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .perm-table th {
+      color: var(--text-main);
+      font-weight: 700;
+      background: var(--primary-soft);
+    }
+
+    .perm-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12.5px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .meta-footer {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 13px;
+      margin-top: 28px;
+    }
+
+    .hindi-note {
+      background: var(--primary-soft);
+      border-left: 4px solid var(--primary);
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="brand-row">
+      <span class="brand-title">ScanPro</span>
+      <span class="pdf-badge">PDF</span>
+    </div>
+    <h1>Privacy Policy • गोपनीयता नीति</h1>
+    <p>Smart Document Scanner &amp; PDF Studio — Built for 100% On-Device Privacy</p>
+    <div class="pill-row">
+      <span class="pill highlight">✓ No INTERNET Permission</span>
+      <span class="pill">Zero Cloud Uploads</span>
+      <span class="pill">No Ads or Trackers</span>
+      <span class="pill">AES-256 Hardware Vault</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <div class="guarantee-box">
+        <h2>🔒 100% Offline &amp; Zero Data Collection Guarantee</h2>
+        <p>
+          <strong>ScanPro PDF</strong> operates completely offline on your Android device. The application does
+          <strong>not</strong> request or declare the Android <code>android.permission.INTERNET</code> permission in its manifest.
+          Because the app has no network access capability, it is technically impossible for ScanPro PDF to upload, transmit,
+          sell, or share your documents, photos, OCR text, signatures, PINs, or personal data with any external server or third party.
+        </p>
+      </div>
+      <div class="hindi-note">
+        <strong>हिंदी सारांश:</strong> ScanPro PDF 100% ऑफ़लाइन काम करता है। इस ऐप में <code>INTERNET</code> की अनुमति भी नहीं है, इसलिए आपके दस्तावेज़, फ़ोटो, आधार/पैन कार्ड, हस्ताक्षर या पासवर्ड कभी भी किसी सर्वर या क्लाउड पर अपलोड नहीं होते। आपका सारा डेटा केवल आपके फ़ोन में सुरक्षित रहता है।
+      </div>
+      <p style="margin-top: 14px;">
+        <strong>Effective Date:</strong> November 9, 2026 &nbsp;|&nbsp;
+        <strong>Last Updated:</strong> November 9, 2026 &nbsp;|&nbsp;
+        <strong>App Package:</strong> <code>com.aistudio.scanpropdf.kxpqzm</code>
+      </p>
+    </div>
+
+    <section class="card">
+      <h2 class="section-title">1. Information Processed Locally on Your Device</h2>
+      <p>All features of ScanPro PDF process data strictly in your device's local memory and private app storage:</p>
+      <ul>
+        <li><strong>Scanned Documents &amp; PDFs:</strong> Pages captured via camera or imported via the Android Photo Picker / Storage Access Framework (SAF) are stored inside your app's private internal directory (<code>files/documents/</code>) or exported only when you explicitly save or share them.</li>
+        <li><strong>Offline OCR (Optical Character Recognition):</strong> Text extraction and searchable PDF generation for English (Latin) and Hindi (Devanagari) run 100% on-device. Recognized text is cached locally on your device so you can search your documents offline and can be cleared anytime in <em>Settings → OCR → Clear cached OCR text</em>.</li>
+        <li><strong>Signatures &amp; Redactions:</strong> Drawn or imported signatures are stored inside private app storage. True PDF Redaction permanently strips underlying text and pixels from redacted regions on-device.</li>
+        <li><strong>QR &amp; Barcode Scanner:</strong> Scanned QR codes and barcodes are decoded locally. If <em>Save scan history</em> is enabled, history is kept in your local Room database and can be cleared with one tap in <em>Settings → QR &amp; Barcode Scanner</em>.</li>
+        <li><strong>App Preferences &amp; Language Packs:</strong> Theme settings, naming templates, and offline language preferences (15 supported languages) are stored locally using Android Jetpack DataStore.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">2. Android Permissions We Use (Least-Privilege Policy)</h2>
+      <p>ScanPro PDF follows Google Play's strict least-privilege permission policy and requests only the permissions required for core functionality:</p>
+      <table class="perm-table">
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Purpose &amp; Local Scope</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="perm-code">CAMERA</span><br/><small>(Runtime Permission)</small></td>
+            <td>Used exclusively when you open the Document Scanner, ID Card Scanner, OCR Camera, or QR/Barcode Scanner. Camera frames are processed locally on your device and never transmitted anywhere.</td>
+          </tr>
+          <tr>
+            <td><span class="perm-code">USE_BIOMETRIC</span><br/><small>(Install-Time)</small></td>
+            <td>Used exclusively with the official Android system <code>BiometricPrompt</code> so you can unlock App Lock and your Secure Vault using your fingerprint or face unlock. ScanPro PDF never accesses raw biometric templates.</td>
+          </tr>
+          <tr>
+            <td><span class="perm-code">VIBRATE</span><br/><small>(Install-Time)</small></td>
+            <td>Used only to provide subtle haptic feedback when a QR code/barcode is detected or when reordering pages.</td>
+          </tr>
+          <tr>
+            <td><span class="perm-code">INTERNET</span><br/><small>(NOT Requested)</small></td>
+            <td><strong>Not declared and not used.</strong> ScanPro PDF has zero network access.</td>
+          </tr>
+          <tr>
+            <td><span class="perm-code">READ_EXTERNAL_STORAGE / READ_MEDIA_*</span><br/><small>(NOT Requested)</small></td>
+            <td><strong>Not declared and not used.</strong> We use the zero-permission Android Photo Picker and system Storage Access Framework (SAF) so the app only sees the specific files you choose.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">3. Encryption, App Lock &amp; Hardware Secure Vault</h2>
+      <ul>
+        <li><strong>Secure Vault (AES-256-GCM):</strong> Files moved into the Secure Vault are encrypted on-device using a 256-bit AES-GCM master key generated and stored inside the hardware-backed <strong>Android Keystore</strong>.</li>
+        <li><strong>App Lock PIN Hashing:</strong> Your App Lock / Vault PIN is never stored in plain text. It is salted with a cryptographic random salt and hashed using <code>PBKDF2WithHmacSHA256</code> (120,000 iterations).</li>
+        <li><strong>PDF Password Encryption:</strong> The Lock PDF tool applies standard AES encryption directly to your PDF file so the password protection travels with the document when shared.</li>
+        <li><strong>Offline Encrypted Backups (<code>.scanpro-backup</code>):</strong> When you create a password-protected backup archive, your archive is encrypted locally with AES-256-GCM. Because there is no cloud server or backdoor, please remember your passwords and PINs.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">4. Third-Party Analytics, Ads &amp; Open-Source Libraries</h2>
+      <p>
+        ScanPro PDF contains <strong>zero advertising SDKs, zero analytics trackers, zero crash-reporting cloud services, and zero telemetry</strong>.
+        Crash logs, if an unexpected error ever occurs, are written strictly to a local file on your phone that you can inspect or clear in Settings.
+      </p>
+      <p>
+        All bundled libraries—including AndroidX Jetpack Compose, Room, DataStore, CameraX, PdfBox-Android, ZXing, Coil, and bundled on-device ML Kit Text Recognition &amp; Barcode Scanning—run locally within the offline sandbox of the application.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">5. Data Retention, Deletion &amp; Your Control</h2>
+      <p>You have 100% ownership and control over every file and setting created in ScanPro PDF:</p>
+      <ul>
+        <li><strong>Delete Documents &amp; Empty Trash:</strong> Move files to Trash or permanently delete them anytime from the <em>Files</em> tab, <em>Trash</em> screen, or <em>Settings → Storage → Empty Trash</em>.</li>
+        <li><strong>Clear OCR &amp; QR Caches:</strong> Use <em>Settings → OCR → Clear cached OCR text</em> and <em>Settings → QR &amp; Barcode Scanner → Clear QR scan history</em> to wipe local recognition records immediately.</li>
+        <li><strong>Strip PDF Metadata:</strong> Use the built-in <em>PDF Info &amp; Metadata</em> or <em>Redact PDF</em> tools to strip author, title, creation timestamps, and XMP metadata before sharing a PDF.</li>
+        <li><strong>Uninstalling the App:</strong> Uninstalling ScanPro PDF or clearing App Storage in Android Settings permanently erases all documents, Secure Vault files, databases, and preferences stored inside the app's private storage.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">6. Children's Privacy</h2>
+      <p>
+        ScanPro PDF does not collect, solicit, or transmit any personal information from anyone, including children under the age of 13 (or the applicable age in your jurisdiction), in full compliance with COPPA, GDPR, and Indian DPDP Act principles.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">7. Changes to This Privacy Policy &amp; Contact Us</h2>
+      <p>
+        If we update this Privacy Policy in future app versions, the updated version will be bundled directly inside the app under <em>Settings → Privacy → Privacy Policy</em> with a revised "Last Updated" date.
+      </p>
+      <p>
+        If you have any questions or feedback regarding privacy or security in ScanPro PDF, please contact us at:<br/>
+        <strong>Email:</strong> <a href="mailto:alphadevil407@gmail.com" style="color: var(--primary);">alphadevil407@gmail.com</a>
+      </p>
+    </section>
+
+    <footer class="meta-footer">
+      &copy; 2026 ScanPro PDF. All rights reserved. • 100% Offline Document Scanner &amp; PDF Toolkit
+    </footer>
+  </main>
+
+</body>
+</html>
